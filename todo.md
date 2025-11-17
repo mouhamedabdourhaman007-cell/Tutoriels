@@ -1,147 +1,105 @@
-# **Exercice CSS**
+Exercice 1
+Carte de profil simple.
 
-## **Objectif**
-
-Apprendre à :
-
-- Sélectionner les éléments HTML via **balises, classes et ID**
-- Appliquer des **styles de base** : couleurs, polices, tailles, marges et paddings
-- Comprendre comment chaque style affecte un élément
-
----
-
-## **1. HTML de base**
-
-Copie ce code HTML dans un fichier `index.html` :
+HTML à utiliser (sans id ni classe) :
 
 ```html
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Exercice CSS Débutant</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+<div>
+    <img src="https://via.placeholder.com/150" alt="avatar">
+    <h2>Jean Dupont</h2>
+    <p>Développeur Web</p>
+    <button>Me contacter</button>
+</div>
+```
 
-    <header id="main-header">
-        <h1 class="title">Bienvenue sur ma page</h1>
-        <p class="subtitle">Apprenons le CSS pas à pas !</p>
-    </header>
+Tâches :
 
-    <nav class="menu">
+– Sélectionner l’élément racine de la carte (le premier div) et lui donner un fond clair, une largeur fixe, du padding, un border-radius et une ombre légère.
+Indication : ce conteneur est la carte entière.
+
+– Sélectionner l’image située directement en premier enfant du conteneur et lui donner une taille fixe ainsi qu’un arrondi complet.
+Indication : c’est le seul élément img dans ce div.
+
+– Sélectionner les éléments de texte du nom et du rôle (les deux éléments juste après l’image) et leur appliquer couleur, police et alignement.
+Indication : ce sont le h2 puis le p dans ce conteneur.
+
+– Sélectionner le bouton final et définir couleur de fond, couleur du texte, padding et un hover modifiant la couleur de fond.
+Indication : c’est l’unique bouton du conteneur.
+
+– Créer un espacement vertical cohérent entre tous les enfants du conteneur en sélectionnant les enfants directs du div ou en réglant chaque élément individuellement.
+Indication : utilisez le sélecteur enfant direct.
+
+---
+
+Exercice 2
+Mini-layout deux colonnes.
+
+HTML (sans id ni classe) :
+
+```html
+<div>
+    <aside>
+        <h3>Menu</h3>
         <ul>
-            <li class="menu-item">Accueil</li>
-            <li class="menu-item">À propos</li>
-            <li class="menu-item">Contact</li>
+            <li>Dashboard</li>
+            <li>Ventes</li>
+            <li>Clients</li>
         </ul>
-    </nav>
+    </aside>
 
-    <section class="content">
-        <h2>Section principale</h2>
-        <p>Voici un paragraphe pour tester vos styles CSS.</p>
-        <p class="highlight">Ce paragraphe doit ressortir avec une couleur différente.</p>
-    </section>
-
-    <footer id="main-footer">
-        <p>Copyright 2025 - Tous droits réservés</p>
-    </footer>
-
-</body>
-</html>
-
+    <main>
+        <h1>Tableau de bord</h1>
+        <p>Voici des informations importantes.</p>
+        <p>Données mises à jour récemment.</p>
+    </main>
+</div>
 ```
 
----
+Tâches :
 
-## **2. Tâches CSS**
+– Sélectionner le conteneur global (le premier div) et activer un affichage en flex avec un espace entre les colonnes.
+Indication : c’est le seul div englobant aside + main.
 
-Crée un fichier `styles.css` et applique les styles suivants. Lis attentivement chaque instruction et applique-les correctement.
+– Sélectionner la colonne latérale (aside) et lui donner une largeur fixe, un fond sombre, une couleur de texte claire.
+Indication : l’unique élément aside.
 
-### **2.1 Header**
+– Sélectionner chaque élément de liste dans aside et leur appliquer padding, curseur pointeur et un hover changeant la couleur.
+Indication : utilisez aside li.
 
-- Sélecteur : `#main-header`
-- Styles :
-    - `background-color` : #f0f0f0
-    - `padding` : 20px
-    - `text-align` : center
-- Sélecteur : `.title`
-- Styles :
-    - `color` : #2c3e50
-    - `font-family` : Arial, sans-serif
-    - `font-size` : 36px
-- Sélecteur : `.subtitle`
-- Styles :
-    - `color` : #7f8c8d
-    - `font-size` : 18px
+– Sélectionner la zone principale de contenu (main) et appliquer padding, fond clair, border-radius.
+Indication : unique main.
+
+– Différencier les deux paragraphes dans main en stylisant le premier comme texte normal, et le second comme texte mis en avant avec couleur différente, poids plus fort, ou bordure gauche colorée.
+Indication : utilisez main p:nth-of-type(2) pour la mise en avant.
 
 ---
 
-### **2.2 Menu**
+Exercice 3
+Petite galerie responsive.
 
-- Sélecteur : `.menu`
-- Styles :
-    - `background-color` : #3498db
-    - `padding` : 10px
-- Sélecteur : `.menu-item`
-- Styles :
-    - `display` : inline-block
-    - `margin-right` : 15px
-    - `color` : white
-    - `font-weight` : bold
-    - `cursor` : pointer
+HTML (sans id ni classe) :
 
----
-
-### **2.3 Section principale**
-
-- Sélecteur : `.content`
-- Styles :
-    - `padding` : 20px
-    - `background-color` : #ecf0f1
-- Sélecteur : `.content h2`
-- Styles :
-    - `color` : #34495e
-    - `font-size` : 28px
-- Sélecteur : `.content p`
-- Styles :
-    - `color` : #2c3e50
-    - `line-height` : 1.6
-- Sélecteur : `.highlight`
-- Styles :
-    - `color` : #e74c3c
-    - `font-weight` : bold
-
----
-
-### **2.4 Footer**
-
-- Sélecteur : `#main-footer`
-- Styles :
-    - `background-color` : #2c3e50
-    - `color` : white
-    - `text-align` : center
-    - `padding` : 15px
-    - `font-size` : 14px
-
----
-
-## **3. Bonus (facultatif)**
-
-- Ajouter un **hover** sur les `.menu-item` pour changer leur couleur au survol :
-
-```css
-.menu-item:hover {
-    color: #f1c40f;
-}
-
+```html
+<section>
+    <h2>Galerie</h2>
+    <div>
+        <img src="https://via.placeholder.com/200" alt="">
+        <img src="https://via.placeholder.com/200" alt="">
+        <img src="https://via.placeholder.com/200" alt="">
+        <img src="https://via.placeholder.com/200" alt="">
+    </div>
+</section>
 ```
 
----
+Tâches :
 
-## **4. Instructions**
+– Styliser la section comme conteneur principal : padding, alignement horizontal du contenu, couleur du titre.
+Indication : utilisez section pour le conteneur global.
 
-1. Commence par appliquer les styles pour le header et observe le rendu.
-2. Passe au menu, puis à la section principale et au footer.
-3. Vérifie que chaque élément a bien pris la couleur, la taille, le padding ou la marge indiquée.
-4. Expérimente : change les couleurs, polices et tailles pour voir l’effet.
+– Styliser le div interne comme grille : display grid, nombre de colonnes, gap.
+Indication : c’est le div juste après le h2.
+
+– Styliser toutes les images dans ce div : arrondi léger, ombre, transition fluide, et un hover agrandissant légèrement l’image via transform: scale().
+Indication : utilisez section div img.
+
+– Modifier le titre en l’atteignant via un sélecteur descendant section h2 pour appliquer une couleur ou un espacement spécifique.
