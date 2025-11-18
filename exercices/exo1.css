@@ -1,0 +1,37 @@
+div{
+    background-color:#f8f8f8;
+    width: 250px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+div img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+div h2{
+    color: #333;
+    font-size: 1.4rem
+}
+div p{
+    color: #666;
+    font-size: 1rem;
+}
+div button{
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+div button:hover{
+    background: #2179b5;
+}
+div>*{
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
